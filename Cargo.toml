@@ -1,0 +1,17 @@
+[package]
+name = "near-lake-async-debug"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix = "=0.11.0-beta.2"
+near-lake-framework = "0.4.0"
+tracing = "0.1.13"
+tracing-subscriber = { version = "0.3.11", features = ["env-filter"] }
+tokio = { version = "1.1", features = ["sync"] }
+
+# breaks
+# serde_json = { version = "=1.0.74", features = ["arbitrary_precision"] }
+
+# works
+serde_json = { version = "=1.0.75", features = ["arbitrary_precision"] }
